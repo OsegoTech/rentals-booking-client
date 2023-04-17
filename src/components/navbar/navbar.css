@@ -8,7 +8,7 @@
 .navContainer{
     width: 100%;
     max-width: 1024px;
-    background-color: red;
+    /*background-color: red;*/
     color: white;
     display: flex;
     align-items: center;
