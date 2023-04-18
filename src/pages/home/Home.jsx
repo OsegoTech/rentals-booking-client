@@ -5,6 +5,7 @@ import Featured from "../../components/featured/Featured.jsx";
 import PropertyList from "../../components/propertyList/PropertyList.jsx";
 import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties.jsx";
 import MailList from "../../components/mailList/MailList.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 const Home = () => {
     return(
         <div>
@@ -21,6 +22,7 @@ const Home = () => {
                 </h1>
                 <FeaturedProperties/>
                 <MailList/>
+                <Footer/>
             </div>
         </div>
     )
