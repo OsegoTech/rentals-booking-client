@@ -9,6 +9,7 @@ import {
 import Home from "./pages/home/Home.jsx";
 import List from "./pages/list/List.jsx";
 import Hotel from "./pages/hotel/Hotel.jsx";
+import "./App.css"
 
 function App() {
 
