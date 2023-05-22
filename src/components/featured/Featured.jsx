@@ -2,8 +2,7 @@ import useFetch from "../../hooks/useFetch";
 // import { useEffect, useState } from "react";
 import "./featured.css";
 const Featured = () => {
-  // const [data , setData] = useState([]);
-  // const [loading, setLoading] = useState(false);
+ 
 
   // Take note
   const { data, loading, error } = useFetch(
@@ -12,25 +11,7 @@ const Featured = () => {
   console.log(data);
 
   // end of take note
-  // useEffect(() => {
-  //   setLoading(true);
-  //   fetch("http://localhost:8800/api/hotels/countByCity?cities=Berlin,London,Madrid",{
-  //   method:"GET"
-  // }).then(response => {
-  //   if (!response.ok) {
-  //     throw new Error('Request failed');
-  //   }
-  //   return response.json();
-  // })
-  // .then(data => {
-  //   setData(data);
-  //   console.log(data);
-  // })
-  // .catch(error => {
-  //   console.error(error);
-  // });
-  //   setLoading(false);
-  // }, []);
+  
   return (
     <div className="featured">
       {loading ? (
@@ -45,7 +26,7 @@ const Featured = () => {
             />
             <div className="featuredTitles">
               <h1>Dublin</h1>
-              <strong>{data[0]}</strong>
+              <h1>{data[0]}</h1>
               <h2> properties</h2>
             </div>
           </div>
@@ -57,6 +38,7 @@ const Featured = () => {
             />
             <div className="featuredTitles">
               <h1>Madrid</h1>
+              <h1>{data[1]}</h1>
               <h2>Properties</h2>
             </div>
           </div>
@@ -68,6 +50,7 @@ const Featured = () => {
             />
             <div className="featuredTitles">
               <h1>London</h1>
+              <h1>{data[2]}</h1>
               <h2> properties</h2>
             </div>
           </div>
