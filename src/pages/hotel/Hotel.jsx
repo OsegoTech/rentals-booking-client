@@ -33,12 +33,13 @@ const Hotel = () => {
   const { dates, options } = useContext(searchContext);
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
   function dayDifference(date1, date2) {
+    if (!date1 || !date2) return 0;
     const timeDiff = Math.abs(date2.getTime() - date1.getTime());
     const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
     return diffDays;
   }
 
-  console.log(dayDifference(dates[0].endDate, dates[0].startDate));
+  // console.log(dayDifference(dates[0].endDate, dates[0].startDate));
   const days = dayDifference(dates[0].endDate, dates[0].startDate);
 
   const handleOpen = (index) => {
@@ -100,7 +101,9 @@ const Hotel = () => {
             </div>
           )}
           <div className="hotelWrapper">
-            <button className="bookNow">Reserve or Book Now</button>
+            <button onClick={handleClick} className="bookNow">
+              Reserve or Book Now
+            </button>
             <h1 className="hotelTitle">{data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />

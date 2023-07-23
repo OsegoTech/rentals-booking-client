@@ -101,8 +101,8 @@ const List = () => {
               "Loading"
             ) : (
               <>
-                {data.map((item) => (
-                  <SearchItem item={item} key={item.id} />
+                {data.map((item, index) => (
+                  <SearchItem item={item} key={index} />
                 ))}
               </>
             )}
