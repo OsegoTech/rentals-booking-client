@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import { useContext, useState } from "react";
 import { searchContext } from "../../context/searchContext";
 import axios from "axios";
-import useNavigate from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
