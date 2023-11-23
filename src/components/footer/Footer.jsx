@@ -1,5 +1,9 @@
+
 import "./footer.css"
 const Footer = () => {
+    const date  = new Date()
+    const year = date.getFullYear()
+    console.log(year)
     return(
         <div className="footer">
             <div className="fLists">
@@ -44,7 +48,7 @@ const Footer = () => {
                     <li className="fListItem">Hotels</li>
                 </ul>
             </div>
-            <div className="fText">Copyright &#169; 2022 OsegoBooking</div>
+            <div className="fText">Copyright &#169; {year} OsegoBooking</div>
         </div>
     )
 }
